@@ -1,0 +1,25 @@
+<h1>{{title}}</h1>
+
+<form [formGroup]="customerForm">
+  name : <input type="text" formControlName="name"><br>
+  firstName : <input type="text" formControlName="firstName"><br>
+  <!-- isNew : <input type="checkbox" formControlName="isNew"> -->
+  <!-- isNew : <input type="radio" formControlName="isNew" value="true"><input type="radio" formControlName="isNew" value="false"> -->
+  isNew : <select formControlName="isNew" >
+    <option value="true">true</option>
+    <option value="false">false</option>
+  </select>
+  <div formGroupName="address">
+       <input type="text" formControlName="street"><br>
+       <input type="text" formControlName="city"><br>
+  </div>
+</form>
+
+<p>
+  customer form values :{{customerForm.value | json}}
+</p>
+
+<p>
+  customer form status :{{customerForm.status | json}}
+</p>
+<button (click)="changeProps()">change</button>

@@ -1,0 +1,12 @@
+<p>customers-list works!</p>
+
+<ul id="items">
+    <li *ngFor='let customer of customers|async' (click)="onSelect(customer)">
+        <span class="badge">
+            {{customer.id}}
+        </span>
+        {{customer.name}}
+    </li>
+</ul>
+
+<router-outlet></router-outlet>

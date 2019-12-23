@@ -1,0 +1,16 @@
+<div *ngIf="todo">
+   <form [formGroup]='todoForm' novalidate (ngSubmit)="onSubmit()">
+    <h2 class="form-signin-heading">Todo</h2>
+    <label for="action" class="sr-only">Action</label>
+     <input type="text" class="form-control" id="action"  formControlName="action">
+
+     <label for="dueDate" class="sr-only">due date</label>
+     <input type="text" class="form-control" id="dueDate"  formControlName="dueDate">
+
+    <!--  <label for="done" class="sr-only">done</label>
+     <input type="text" class="form-control" id="dueDate"  formControlName="dueDate"> -->
+
+     <button type="submit" class="btn btn-lg btn-primary btn-block" [disabled]='todoForm.status==INVALID'> update</button>
+
+   </form>
+</div>

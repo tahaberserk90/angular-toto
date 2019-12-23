@@ -1,0 +1,14 @@
+<h1>{{title}}</h1>
+
+<button (click)="changeCustomerProps()"> change propos</button>
+<button (click)="changeCustomerObj()"> change propos</button><br>
+{{customer.name}}  {{customer.firstName}}
+
+<hr>
+<app-info [customer]="subjectCustomer"></app-info>
+
+<!-- <h3>
+  {{cpt}}
+</h3>
+<button (click)="incInZone()">inc inZone</button>
+<button (click)="incOutZone()">inc outZone</button> -->
